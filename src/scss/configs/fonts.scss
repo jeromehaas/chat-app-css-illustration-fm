@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Rubik';
+	src: 
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-light.ttf') format('ttf'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-light.woff') format('woff'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-light.woff2') format('woff2');
+	font-display: block;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: 
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-regular.ttf') format('ttf'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-regular.woff') format('woff'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-regular.woff2') format('woff2');
+	font-display: block;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: 
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/medium-light.ttf') format('ttf'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/medium-light.woff') format('woff'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/medium-light.woff2') format('woff2');
+	font-display: block;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: 
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-bold.ttf') format('ttf'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-bold.woff') format('woff'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-bold.woff2') format('woff2');
+	font-display: block;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: 
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-extrabold.ttf') format('ttf'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-extrabold.woff') format('woff'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-extrabold.woff2') format('woff2');
+	font-display: block;
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: 
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-black.ttf') format('ttf'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-black.woff') format('woff'),
+		local('fonts/rubik'), url('/src/assets/fonts/rubik/rubik-black.woff2') format('woff2');
+	font-display: block;
+	font-weight: 900;
+}
+
