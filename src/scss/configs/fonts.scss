@@ -58,3 +58,16 @@
 	font-weight: 900;
 }
 
+@font-face {
+	font-family: 'Nucleo';
+	src: 
+		local('fonts/nucleo'), url('/src/assets/fonts/nucleo/nucleo.eot') format('embedded-opentype'),
+		local('fonts/nucleo'), url('/src/assets/fonts/nucleo/nucleo.ttf') format('ttf'),
+		local('fonts/nucleo'), url('/src/assets/fonts/nucleo/nucleo.woff') format('woff'),
+		local('fonts/nucleo'), url('/src/assets/fonts/nucleo/nucleo.woff2') format('woff2'),
+		local('fonts/nucleo'), url('/src/assets/fonts/nucleo/nucleo.svg') format('svg');
+	font-display: block;
+	font-weight: normal;
+	font-style: normal;
+}
+
