@@ -5,6 +5,8 @@ const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+const webpackConfig = require('./webpack.config.js');
+const webpackStream = require('webpack-stream');
 
 const filePaths = {
 	scss: {
@@ -13,7 +15,7 @@ const filePaths = {
 	},
 	js: {
 		src: ['./src/**/*.js'],
-		dist: ['./dist/js']
+		dist: ['./js']
 	}
 };
 
@@ -28,6 +30,13 @@ const scssTask = (done) => {
 	done();
 };
 
+const jsTask = (done) => {
+	gulp.src(filePaths.js.src)
+		.pipe(webpackStream(webpackConfig))
+		.pipe(gulp.dest(filePaths.js.dist[0]));
+	done();
+};
+
 const watchTask = () => {
 	browserSync.init({
 		server: { baseDir: './' }, 
@@ -37,9 +46,10 @@ const watchTask = () => {
 	});
 	gulp.watch('./index.html').on('change', browserSync.reload);
 	gulp.watch(filePaths.scss.src, scssTask).on('change', browserSync.reload);
+	gulp.watch(filePaths.js.src, jsTask).on('change', browserSync.reload);
 };
 
-exports.build = parallel(scssTask);
+exports.build = parallel(scssTask, jsTask);
 exports.default = series(exports.build, watchTask);
 
 

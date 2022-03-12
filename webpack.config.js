@@ -4,13 +4,12 @@ const webpack = require('webpack');
 module.exports = {
 	entry: './src/js/main.js',
 	resolve: {
-		extensios: ['.webpack.js', '.js']
+		extensions: ['.webpack.js', '.js']
 	},
-	mode: 'development',
+	mode: 'production',
 	output: {
-		publicPath: '/js/',
-		path: path.join(__dirname, '/wwwroot/js/'),
-		filename: '[name].build.js' 
+		filename: '[name].build.js',
+		path: path.join(__dirname, 'js'),
 	},
 	module: {
 		rules: [
