@@ -6,7 +6,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 50px;
+	gap: 75px;
 	position: relative;
 	padding: 32px;
 	overflow: hidden !important;
@@ -34,8 +34,17 @@
 		}
 	}
 	
-	&__teaser {
-		
+	&__teaser, .teaser {
+		max-width: 445px;
+
+		&__title {
+			margin-bottom: 24px;
+		}
+
+		&__text {
+			color: $grey;
+		}
+
 	}
 
 	&::before, 
