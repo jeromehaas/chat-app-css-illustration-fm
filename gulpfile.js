@@ -1,14 +1,14 @@
 const gulp = require('gulp');
 const { series, parallel, dest } = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 
 const filePaths = {
 	scss: {
-		src: ['./src/scss/configs/reset.scss', './src/scss/configs/fonts.scss', './src/scss/configs/typography.scss', './src/scss/congigs/nucleo.scss', './src/scss/variables.scss', './src/scss/global.scss', './src/sections/**/*.scss'],
+		src: ['./src/scss/configs/reset.scss', './src/scss/configs/fonts.scss', './src/scss/configs/typography.scss', './src/scss/configs/nucleo.scss', './src/scss/configs/variables.scss', './src/scss/configs/global.scss', './src/sections/**/*.scss'],
 		dist: ['./css']
 	},
 	js: {
@@ -23,9 +23,9 @@ const scssTask = (done) => {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(cssnano())
-		.pipe(sourcemapswire('.'))
+		.pipe(sourcemaps.write('.'))
 		.pipe(dest(filePaths.scss.dist[0]));
-	done()
+	done();
 };
 
 const watchTask = () => {
