@@ -1,0 +1,8 @@
+{
+  "name": "chat-app-css-illustration-fm",
+  "version": "1.0.0",
+  "description": "Challenge from FrontendMentor",
+  "main": "index.js",
+  "author": "Jérôme Haas",
+  "license": "MIT"
+}
