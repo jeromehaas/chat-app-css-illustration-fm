@@ -1,7 +1,11 @@
 $white: #FFFFFF;
-$lightgrey: #FAFAFA;
+$lightgrey-100: #FAFAFA;
+$lightgrey-75: #F5F3F7;
+$lightgrey-50: #FAFAFA;
 $grey: #A39DA9;
+$darkgrey: #979797;
 $black: #6E5D7E;
 $magenta: #E844FF;
 $violet: #8739FF;
 $gradient: linear-gradient(225deg, $magenta 0%, $magenta 0.01%, $violet 100%);
+$shadowcolor: rgba(62, 39, 83, 0.251202);

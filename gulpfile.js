@@ -11,7 +11,7 @@ const copy = require('gulp-copy');
 
 const filePaths = {
 	scss: {
-		src: ['./src/scss/configs/reset.scss', './src/scss/configs/fonts.scss', './src/scss/configs/typography.scss', './src/scss/configs/nucleo.scss', './src/scss/configs/variables.scss', './src/scss/configs/global.scss', './src/sections/**/*.scss'],
+		src: ['./src/scss/configs/reset.scss', './src/scss/configs/fonts.scss', './src/scss/configs/typography.scss', './src/scss/configs/nucleo.scss', './src/scss/configs/variables.scss', './src/scss/configs/global.scss', './src/scss/sections/**/*.scss'],
 		dist: ['./css']
 	},
 	js: {
@@ -47,7 +47,6 @@ const assetsTask = (done) => {
 	.pipe(gulp.dest(filePaths.assets.dist[0]));
 	done();
 };
-
 
 const watchTask = () => {
 	browserSync.init({
