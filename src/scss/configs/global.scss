@@ -2,11 +2,21 @@
 	box-sizing: border-box;
 	scrollbar-width: none;
 	scroll-behavior: smooth;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 *::-webkit-scrollbar {
 	display: none;
 	-webkit-appearance: none;
+}
+
+*::selection {
+	background: $magenta;
+	opacity: 0.1;
 }
 
 body {

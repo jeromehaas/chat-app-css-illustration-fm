@@ -1,0 +1,69 @@
+ [
+		{
+			"type": "text",
+			"content": {
+				"text": "That sounds great. I'd be happy with that."
+			},
+			"position": "left",
+			"color": "magenta"
+		},
+		{
+			"type": "text",
+			"content": {
+				"text": "Could you send over some pictures of your dog, please?"
+			},
+			"position": "left",
+			"color": "magenta"
+		},
+		{
+			"type": "media", 
+			"images": [
+				"/assets/images/dog-1.jpg",
+				"/assets/images/dog-2.jpg",
+				"/assets/images/dog-3.jpg"
+			],
+			"position": "right"
+		},
+		{
+			"type": "text",
+			"content": {
+				"text": "Here are a few pictures. She's a happy girl!"
+			},
+			"position": "right",
+			"color": "white"
+		},
+		{
+			"type": "text",
+			"content": {
+				"text": "Can you make it?"
+			},
+			"position": "right",
+			"color": "white"
+		},	
+		{
+			"type": "text",
+			"content": {
+				"text": "She looks so happy! The time we discussed works. How long shall I take her out for?"
+			},
+			"position": "left",
+			"color": "magenta"
+		},
+		{
+			"type": "offer", 
+			"content": {
+				"text": "30 Minutes Walk", 
+				"price": "$29"
+			},
+			"position": "left", 
+			"color": "violet"
+		},
+		{
+			"type": "offer", 
+			"content": {
+				"text": "1 Hour Walk", 
+				"price": "$49"
+			},
+			"position": "left", 
+			"color": "violet"
+		}
+	]

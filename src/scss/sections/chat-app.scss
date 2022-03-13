@@ -6,7 +6,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 64px;
+	gap: 120px;
 	position: relative;
 	padding: 32px;
 	overflow: hidden !important;
@@ -23,6 +23,7 @@
 		position: relative;
 		box-shadow: 0px 30px 60px -10px $shadowcolor;
 		overflow: hidden;
+		animation: flow 10s ease infinite;
 
 		&__header, .header {
 			grid-area: header;
@@ -103,6 +104,10 @@
 		&__message, .message {
 			max-width: 75%;
 			margin-bottom: 10px;
+			opacity: 0;
+			animation: appear 0.3s ease forwards;
+			position: relative;
+			top: 16px;
 			
 			&:last-child {
 				margin-bottom: 0;
@@ -244,6 +249,7 @@
 				position: absolute; 
 				inset: 0 0 0 0;
 				padding: 10px 16px;
+				background-color: $white;
 			}
 
 			&__button, .button{
@@ -316,6 +322,10 @@
 		top: 15vh;
 		right: -5vw;
 		opacity: 0.03
+	}
+
+	@media (max-width: 1200px) {
+		gap: 64px
 	}
 
 	@media (max-width: 700px) {
