@@ -18,9 +18,9 @@
 		{
 			"type": "media", 
 			"images": [
-				"/assets/images/dog-1.jpg",
-				"/assets/images/dog-2.jpg",
-				"/assets/images/dog-3.jpg"
+				"assets/images/dog-1.jpg",
+				"assets/images/dog-2.jpg",
+				"assets/images/dog-3.jpg"
 			],
 			"position": "right"
 		},
