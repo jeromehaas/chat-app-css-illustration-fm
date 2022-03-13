@@ -11,7 +11,61 @@
 <body>
 	<section class="chat-app">
 
-		 <div class="chat-app__phone">
+		 <div class="chat-app__phone phone">
+			<div class="phone__header header">
+				<div class="header__back">
+					<i class="icon icon--md icon--white icon-arrow-left "></i>
+				</div>
+				<div class="header__contact contact">
+					<img class="contact__avatar" src="/assets/images/persona.png" alt="Avatar">
+					<p class="contact__name">Samuel Green</p>
+					<p class="contact__status">Available to walk</p>
+				</div>
+				<div class="header__menu">
+					<i class="icon icon--lg icon--white icon-menu"></i>
+				</div>
+			</div>
+			<div class="phone__inner">
+				<div class="phone__messages">
+					<div class="phone__message message phone__message--text text message--left message--magenta">
+						<p class="text__text">That sounds great. I'd be happy with that.</p>
+					</div>
+					<div class="phone__message message phone__message--text text message--left message--magenta">
+						<p class="text__text">Could you send over some pictures of your dog please?</p>
+					</div>
+					<div class="phone__message message phone__message--media media message--right">
+						<img src="/assets/images/dog-1.jpg" alt="Media">
+						<img src="/assets/images/dog-2.jpg" alt="Media">
+						<img src="/assets/images/dog-3.jpg" alt="Media">
+					</div> 
+					<div class="phone__message message phone__message--text text message--right message--white">
+						<p class="text__text">Here are a few pictures. She's a happy girl!</p>
+					</div>
+					<div class="phone__message message phone__message--text text message--right message--white">
+						<p class="text__text">Can you make it?</p>
+					</div>
+					<div class="phone__message message phone__message--text text message--left message--magenta">
+						<p class="text__text">She looks so happy! The time we discussed words. How long shall I take her out for?</p>
+					</div>
+					<div class="phone__message message phone__message--offer offer message--left message--violet">
+						<div class="offer__checkbox checkbox" checked name="offer">
+							<i class="checkbox__icon icon icon--sm icon--white icon-checkmark"></i>
+						</div>
+						<p class="offer__text">30 Minutes Walk</p>
+						<p class="offer__price">$29</p>
+					</div>
+					<div class="phone__message message phone__message--offer offer message--left message--violet">
+						<div class="offer__checkbox checkbox" checked name="offer">
+							<i class="checkbox__icon icon icon--sm icon--white icon-checkmark"></i>
+						</div>
+						<p class="offer__text">1 Hour Walk</p>
+						<p class="offer__price">$29</p>
+					</div>
+					
+					
+				</div>
+				<textarea class="phone__input" placeholder="Type a message..." name="" id="" cols="30" rows="10"></textarea>
+			</div>
 		 </div>
 
 		 <div class="chat-app__teaser teaser">

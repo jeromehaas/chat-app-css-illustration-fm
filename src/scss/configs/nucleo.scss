@@ -1,8 +1,10 @@
 .icon {
+	font-family: 'Nucleo';
 	display: inline-block;
-	font: normal normal normal 1em/1 'Nucleo';
+	font: normal normal normal 1em/1 'Nucleo', sans-serif;
 	color: inherit;
 	flex-shrink: 0;
+	speak: none;
 	text-transform: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -11,8 +13,12 @@
 	&--md { font-size: 16px; }
 	&--lg { font-size: 20px; }
 
+	&--white { color: $white }
+	&--black { color: $black }
+
 }
 
-.icon-arrow-left::before { content: '/ea02'; }
-.icon-arrow-right::before { content: '/ea03'; }
-.icon-menu::before { content: '/ea04'; }
+.icon-arrow-left::before { content: "\ea02"; }
+.icon-arrow-right::before { content: "\ea03"; }
+.icon-menu::before { content: "\ea04"; }
+.icon-checkmark::before { content: "\ea05"; }

@@ -1,6 +1,6 @@
 .chat-app {
 	width: 100%;
-	max-width: 100vh;
+	max-width: 100vw;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
@@ -11,7 +11,8 @@
 	padding: 32px;
 	overflow: hidden !important;
 
-	&__phone {
+	&__phone, .phone {
+		position: relative;
 		width: 247px;
 		height: 505px;
 		border: 10px solid $white;
@@ -20,6 +21,214 @@
 		background-color: $lightgrey-75;
 		position: relative;
 		box-shadow: 0px 30px 60px -10px $shadowcolor;
+		overflow: hidden;
+
+		&__header, .header {
+			grid-area: header;
+			background: $gradient;
+			width: 100%;
+			height: 80px;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 16px;
+			padding: 32px 16px 16px 16px;
+			// position: absolute;
+			box-shadow: 0px 0px 13px $shadowcolor;
+
+			&__back {
+				margin-top: 4px;
+				cursor: pointer;
+			}
+			
+			&__contact, .contact {
+				display: grid;
+				grid-template: 
+				"avatar name"
+				"avatar status";
+				
+				&__avatar {
+					grid-area: avatar;
+					width: 32px;
+					height: 32px;
+					border: 2px solid $white;
+					border-radius: 50%;
+					display: block;
+					margin-right: 8px;
+				}
+				
+				&__name {
+					grid-area: name;
+					line-height: 1;
+					align-self: center;
+					color: $white;
+				}
+				
+				&__status {
+					grid-area: status;
+					line-height: 1;
+					align-self: center;
+					color: $lightmagenta;
+				}
+
+			}
+			
+			&__menu {
+				margin-left: auto;
+				margin-top: 4px;
+				cursor: pointer;
+			}
+
+		}
+
+		&__inner {
+			height: 100%;
+			height: calc(100% - (50px));
+			overflow-y: scroll;
+			padding: 8px;
+		}
+
+		&__messages {
+			height: calc(100% - (80px));
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			overflow: scroll;
+			flex-grow: 0;
+		}
+		
+		&__message, .message {
+			max-width: 75%;
+			margin-bottom: 10px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+			
+			&--left {
+				align-self: flex-start;
+				border-radius: 10px 10px 4px 10px;
+			}
+			
+			&--right {
+				border-radius: 10px 10px 4px 10px;
+				align-self: flex-end;
+			}
+			
+			&--white {
+				background-color: $white;
+				color: $black;
+				box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
+			}
+			
+			&--magenta {
+				background-color: $magenta;
+				color: $violet;
+			}
+			
+			&--violet {
+				background-color: $violet;
+				color: white;
+			}
+			
+			&--text, .text {
+				padding: 10px;
+				background-color: white;
+				border-radius: 10px;	
+			}
+
+			&--offer, .offer {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				padding: 10px;
+				width: 100%;
+				align-items: center;
+
+				&__checkbox, .checkbox {
+					width: 14px;
+					height: 14px;
+					border-radius: 50%;
+					margin-right: 8px;
+					border: 1px solid $magenta;
+					position: relative;
+
+					&__icon {
+						font-size: 0px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 5;
+					}
+						
+					&::after {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						border-radius: 50%;
+						width: 0%;
+						height: 0%;
+						background-color: $green;
+					}
+
+					&--checked {
+
+						.checkbox__icon {
+							font-size: 6px;
+						}
+
+						&::after {
+							width: 100% !important;
+							height: 100% !important;	
+						}
+
+
+
+					}
+
+				}
+
+				&__price {
+					margin-left: auto;
+				}
+
+			}
+
+			&--media, .media {
+				display: flex;
+				flex-direction: row;
+
+				img {
+					display: block;
+					width: 40px; 
+					height: 40px;
+					border-radius: 8px;
+					margin-right: 8px;
+					object-fit: cover;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+				}
+
+			}
+
+		}
+		
+		&__input {
+			height: 32px;
+			width: 100%;
+			display: block;
+			border-radius: 18px;
+			margin-top: 16px;
+			padding: 8px 16px;
+		}
 
 		&::before {
 			content: "";
@@ -51,22 +260,22 @@
 	&::after {
 		content: "";
 		position: absolute;
-		max-width: calc(75% - 100px);
-		width: 500px;
-		height: 150%;
+		max-width: calc(50vw - 200px);
+		width: 41vw;
+		height: 145%;
 		background: $gradient;
 		border-radius: 50vw;
 		z-index: -1;
 	}
 
 	&::before {
-		bottom: 100px;
-		left: -25%;
+		bottom: 15vh;
+		left: -5vw;
 	}
 	
 	&::after {
-		top: 100px;
-		right: -25%;
+		top: 15vh;
+		right: -5vw;
 		opacity: 0.03
 	}
 
