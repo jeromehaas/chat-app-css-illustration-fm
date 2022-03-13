@@ -6,14 +6,15 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 75px;
+	gap: 64px;
 	position: relative;
 	padding: 32px;
 	overflow: hidden !important;
 
 	&__phone, .phone {
 		position: relative;
-		width: 247px;
+		width: 100%;
+		max-width: 247px;
 		height: 505px;
 		border: 10px solid $white;
 		border-radius: 30px;
@@ -34,7 +35,6 @@
 			align-items: center;
 			gap: 16px;
 			padding: 32px 16px 16px 16px;
-			// position: absolute;
 			box-shadow: 0px 0px 13px $shadowcolor;
 
 			&__back {
@@ -86,10 +86,10 @@
 			height: 100%;
 			height: calc(100% - (50px));
 			overflow-y: scroll;
-			padding: 8px;
 		}
-
+		
 		&__messages {
+			padding: 8px;
 			height: calc(100% - (80px));
 			display: flex;
 			flex-direction: column;
@@ -97,6 +97,7 @@
 			justify-content: flex-start;
 			overflow: scroll;
 			flex-grow: 0;
+			border-bottom: 1px solid $lightgrey-100;
 		}
 		
 		&__message, .message {
@@ -146,10 +147,13 @@
 				padding: 10px;
 				width: 100%;
 				align-items: center;
+				cursor: pointer;
 
 				&__checkbox, .checkbox {
 					width: 14px;
 					height: 14px;
+					min-width: 14px;
+					min-height: 14px;
 					border-radius: 50%;
 					margin-right: 8px;
 					border: 1px solid $magenta;
@@ -187,10 +191,13 @@
 							height: 100% !important;	
 						}
 
-
-
 					}
 
+				}
+
+				&__text {
+					margin-top: 2px;
+					margin-right: 8px;
 				}
 
 				&__price {
@@ -202,13 +209,15 @@
 			&--media, .media {
 				display: flex;
 				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+				gap: 10px;
 
 				img {
 					display: block;
 					width: 40px; 
 					height: 40px;
 					border-radius: 8px;
-					margin-right: 8px;
 					object-fit: cover;
 
 					&:last-child {
@@ -221,13 +230,23 @@
 
 		}
 		
-		&__input {
+		&__input, .input {
 			height: 32px;
-			width: 100%;
+			width: calc(100% - (2 * 8px));
 			display: block;
-			border-radius: 18px;
 			margin-top: 16px;
-			padding: 8px 16px;
+			margin: 8px;
+			padding: 8px;
+			position: relative;
+			
+			&__textarea {
+				border-radius: 18px;
+				position: absolute; 
+				inset: 0 0 0 0;
+				background-color: $white;
+				padding: 10px 16px;
+			}
+	
 		}
 
 		&::before {
@@ -277,6 +296,55 @@
 		top: 15vh;
 		right: -5vw;
 		opacity: 0.03
+	}
+
+	@media (max-width: 700px) {
+		flex-direction: column;
+
+		&__phone, .phone {
+			max-width: 350px;
+			height: 545px;
+		}
+
+		&__teaser, .teaser {
+			margin-bottom: 32px;
+	
+			&__title {
+				text-align: center;
+			}
+	
+			&__text {
+				text-align: center;
+			}
+	
+		}
+
+		&::before, 
+		&::after {
+			content: "";
+			position: absolute;
+			max-width: calc(100vw);
+			width: 100vw;
+		}
+	
+		&::before {
+			bottom: 40vh;
+			left: -45%;
+		}
+		
+		&::after {
+			top: 40vh;
+			right: -45%;
+			opacity: 0.03
+		}
+
+	}
+	@media (max-width: 350px) {
+		
+		&__message, .message {
+			max-width: 90% !important;
+		}
+
 	}
 
 }
