@@ -7,7 +7,6 @@ const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const webpackConfig = require('./webpack.config.js');
 const webpackStream = require('webpack-stream');
-const copy = require('gulp-copy');
 
 const filePaths = {
 	scss: {
@@ -62,6 +61,3 @@ const watchTask = () => {
 
 exports.build = parallel(scssTask, jsTask, assetsTask);
 exports.default = series(exports.build, watchTask);
-
-
-

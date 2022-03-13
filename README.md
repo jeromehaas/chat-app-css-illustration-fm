@@ -12,8 +12,8 @@ My goal in this challenge was to:
 
 ### How to run
 ```bash
-git clone https://github.com/jeromehaas/qr-code-component-fm.git
-cd qr-code-component-fm
+git clone https://github.com/jeromehaas/chat-app-illustration-fm.git
+cd chat-app-illustration-fm
 nvm use
 npm install 
 npm start

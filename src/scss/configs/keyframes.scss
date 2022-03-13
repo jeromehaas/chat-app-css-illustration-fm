@@ -1,29 +1,10 @@
 @keyframes appear {
-	
-	from {
-		opacity: 0;
-		top: 16px;
-	}
-	
-	to {
-		opacity: 1;
-		top: 0px;
-	}
-
+	from { opacity: 0; top: 16px; }
+	to { opacity: 1; top: 0px; }
 }
 
 @keyframes flow {
-
-	0% {
-		top: 0px;
-	}
-
-	50% {
-		top: 16px;		
-	}
-
-	100% {
-		top: 0px
-	}
-
+	0% { top: 0px; }
+	50% { top: 8px; }
+	100% { top: 0px; }
 }
